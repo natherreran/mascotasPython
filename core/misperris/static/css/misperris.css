@@ -1,0 +1,416 @@
+@import 'mediaqueries.css';
+
+/* CUSTOM CLASSES */
+.center {
+    text-align: center;
+}
+button, .btn {
+    border-radius: 0 !important;
+}
+ label.error {
+    font-size: 13px;
+    color: #0984e3;
+ }
+
+
+/* BODY */
+body {
+    margin: 0%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.main-container {
+    padding: 0 5em;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* LISTA DESORDENADA */
+
+ul {
+    list-style: none;
+} 
+
+ul li {
+    display: inline-block;
+    color: white;
+    margin-left: 16px;
+    padding: 10px 5px 7px 9px;
+    margin: 0 4px;
+}
+
+/* HEADER */
+header {
+    margin: 0;
+    width: 100%;
+    background-color: #6DCCAA;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    display: block;
+}
+
+header .logotipo {
+    display: inline-block;
+    float: left;
+}
+
+header .logotipo img {
+    width: 11em !important;
+    height: auto;;
+}
+
+header nav {
+    text-align: center;
+    position: relative;
+    top: 11px;
+}
+
+header nav ul li a{
+    color: white;
+    font-size: 18px;
+    text-transform: capitalize;
+   
+}
+
+header nav ul li a:hover {
+    color: white !important;
+    border-bottom: 1px solid white;
+    text-decoration: none !important;
+}
+
+header .menu-movil li a{
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    padding: 1em;
+    top: 11px;
+    margin-top: 0;
+    display: inline-block;
+}
+
+
+/*FOOTER */
+footer {
+    background-color: #e6e6e6;
+    width: 100%;
+    padding: 1em 0;
+    color: #888;
+}
+
+footer nav ul li {
+    color: black;
+    font-size: 15px;
+}
+
+/*PORTADA */
+.portada {
+    width: 100%;
+    background: #6DCCAA;
+    height: auto;
+    position: relative;
+    padding: 0;
+}
+
+.portada img{
+    width: 100%;
+    height: auto;
+}
+
+.portada .box-item {
+    position: absolute;
+    bottom: 0;
+    color: black;
+    text-align: left;
+    padding: .5em;
+    margin: 1em;
+    word-wrap: initial;
+    text-overflow: ellipsis;
+    border: 1px solid white;
+}
+
+.portada .borde {
+    border: 1px solid white;
+    display: inline-block;
+    padding: 1em;
+    background: rgba(255,255,255, 0.8);
+}
+
+.portada .borde p {
+    margin: 0 !important
+}
+
+.portada .box-item h3 {
+    font-size: 16px;
+}
+
+.portada .box-item p {
+    padding-bottom: 0;
+}
+
+/* CARRUSEL */
+
+
+
+.owl-dots, .owl-nav {
+    display: block !important;
+} 
+
+
+
+.owl-next span, 
+.owl-prev span {
+    display: none;
+}
+.owl-carousel {
+    position: relative;;
+}
+.owl-nav {
+    position: absolute;
+    top: 6em;
+    width: 100%;
+    padding: 0 1em;
+}
+
+.owl-next {
+    background-image: url('../img/icons/arrow-next.svg') !important;
+    width: 2em;
+    height: 2em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100px;
+    float: right;
+}
+.owl-prev {
+    background-image: url('../img/icons/arrow-prev.svg') !important;
+    width: 2em;
+    height: 2em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100px;
+    float: left;
+    margin-left: 1em;
+}
+.owl-prev:hover {
+    background-image: url('../img/icons/arrow-prev.svg') !important;
+    background-color: transparent !important;
+}
+.owl-next:hover {
+    background-image: url('../img/icons/arrow-next.svg') !important;
+    background-color: transparent !important;
+}
+
+
+/* SUBMENU */
+
+.submenu {
+    background-color: #6DCCAA;
+    width: 100%;
+    padding: 0em 0 .5em 0;
+    text-align: center;
+    position: relative;
+    top: -3px;
+}
+
+.submenu .box h3{
+    color: white;
+    
+}
+
+.submenu ul,
+.submenu .box {
+    margin-bottom: 0 !important;
+}
+.submenu ul:hover {
+    margin-bottom: 0 !important;
+}
+
+.divisor {
+    width: 5em;
+    display: inline-block;
+    height: 2px;
+    background: black;
+}
+
+/* SECCIONES */
+.servicios {
+    margin: 1em 0;
+}
+.servicios article.rescate {
+    text-align: right;
+    padding: 0.5em 1em 2em 2em; 
+}
+.servicios article.crowdfunding {
+    text-align: left;
+    padding: 0.5em 2em 2em 1em;
+}
+
+.servicios article .bajada {
+    display: block;
+}
+
+.galeria, .servicios {
+    margin-bottom: 2em;
+}
+
+.servicios img {
+    width: 70%;
+    height: 70%;
+}
+
+/* GALERIA */
+
+.galeria {
+    background: #6DCCAA;
+    display: inline-block;
+    padding: 1em;
+    width: 100%;
+}
+
+.galeria box:hover {
+    margin-bottom: 6px;
+}
+
+.galeria .box:hover img {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1); 
+}
+
+.galeria .box {
+    margin-bottom: 11px;
+}
+
+.galeria .title-text {
+    font-size: 26px !important;
+}
+
+.galeria .parr-text {
+    text-align: center;
+    color: green;
+    font-size: 16px;
+}
+
+.hvr-underline-from-center::before {
+    background: white !important;
+}
+
+.galeria .row .box-column {
+    padding: 0.2em !important;
+}
+
+.galeria h2 {
+    color: white;
+    text-align: center;
+}
+
+.box:hover .box-info {
+    height: auto !important;
+    padding: 1em !important;
+}
+
+.box:hover {
+    margin-bottom: 1em;
+}
+
+.box-info h2 {
+    color: white;
+    text-align: left !important;
+    text-transform: capitalize;
+}
+
+.galeria .box .box-info {
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.galeria .box-boton {
+    width: 100%;
+    text-align: right;
+}
+
+
+/* CONTACTO */
+
+.contacto {
+    padding: 1em 1em 2em;
+}
+
+.contacto h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.contacto button {
+    margin-top: 1em;
+}
+
+.contacto form {
+    background-color: #81ecec;
+    border-radius: 8px;
+    padding: 1.5em;
+}
+.contacto button {
+    padding: .5em 3em !important;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+/* TITULOS */
+
+.title-lg {
+    font-size: 20px;
+}
+.title-md {
+    font-size: 16px;
+}
+.bajada {
+    color: #888;
+    font-size: 12px;
+}
+p {
+    color: #333;
+    font-size: 14px;
+}
+
+/* BOTONES */
+
+.btn-outline-black {
+    text-transform: uppercase;
+    border: 2px solid black;
+    padding: .5em;
+    font-weight: 600;
+    background: transparent;
+}
+
+/* ICONOS */
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* MENU */
+
+
+
+.logotipo {
+    overflow: hidden;
+    width: 15em;
+    margin: .5em 0;
+}
+
+.logotipo img{
+    width: 100%;
+    height: auto;
+    padding: 0.5em ;
+}
+
+.card {
+    display: inline-block !important; 
+}
+

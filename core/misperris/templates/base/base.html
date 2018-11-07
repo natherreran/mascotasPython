@@ -1,0 +1,44 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/misperris.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lib/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lib/owl-carousel/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lib/owl-carousel/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lib/hover-min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lib/scrolling/aos.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{%  block title %} Mis Perris {% endblock %}</title>
+</head>
+<body>
+    {% block header %}
+        {% include 'base/header.html' %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block footer %}
+        {% include 'base/footer.html' %}
+    {% endblock%}
+
+    <script src="{% static 'js/libs/jquery.min.js' %}"></script>  
+    <!-- PLUGIN CARRUSEL -->
+    <script src="{% static 'js/libs/owl-carousel/owl.carousel.js' %}"></script>
+    <!-- BOOTSTRAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <!-- PLUGIN RUT CHILENO -->
+    <script src="{% static 'js/libs/rut-chileno/jquery.rut.min.js' %}"></script>
+    <!-- PLUGIN JQUERY VALIDATE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <!-- PLUGIN JQUERY SCROLLING -->
+    <script src="{% static 'js/libs/scrolling/aos.js' %}"></script>
+    <!-- FUNCIONES PROPIAS -->
+    <script src="{% static 'js/funciones.js' %}"></script>    
+</body>
+</html>

@@ -1,0 +1,143 @@
+
+{% extends 'base/base.html'%}
+{% load staticfiles%}
+{%  block title %} 
+    este es el titulo de la app mis perris 
+{% endblock %}
+
+
+
+{% block content %}
+<div class="portada">
+        <div id="carrusel" class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="border">
+                <img src="{% static 'img/adoptados/Tom.jpg' %}" alt="">
+                <div class="box-item">
+                    <div class="borde">
+                    <h3>Tom: Un dulce bebe</h3>
+                    <p>Estamos felices de tener a tom en casa. Es un super fiel compañero"</p>
+                </div>
+                </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="border">
+                <img src="{% static 'img/adoptados/Apolo.jpg' %}" alt="">
+                <div class="box-item">
+                    <div class="borde">
+                    <h3>Apolo: Un sobreviviente</h3>
+                    <p>"Es un angelito en vida, hoy parte una nueva historia junto a su familia."</p>
+                </div>
+                </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="border">
+                <img src="{% static 'img/adoptados/Duque.jpg' %}" alt="">
+                <div class="box-item">
+                    <div class="borde">
+                    <h3>Duque: La vida en las montañas</h3>
+                    <p>"Es extrovertido y jugueton. Le encanta que lo mimen."</p>
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="submenu">
+        <div class="main-container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="box">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img class="icon" src="{% static 'img/icons/facebook.svg' %}" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img class="icon" src="{% static 'img/icons/google.svg' %}" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img class="icon" src="{% static 'img/icons/instagram.svg' %}" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img class="icon" src="{% static 'img/icons/gmail.svg' %}" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SERVICIOS -->
+    <div class="main-container">
+        <div id="rescate" class="servicios" data-aos="fade-up">
+            <div class="row">
+                <div class="col-md-6">
+                    <article class="rescate">
+                        <h2>RESCATE</h2>
+                        <span class="bajada">ETAPA UNO</span>
+                        <div class="divisor"></div>
+                        <p>Rescatamos perros en situación de peligro y/o abandono. los rehabilitamos y los preparamos para buscarles un hogar.</p>
+                        <img src="{% static 'img/rescate.jpg' %}" alt="">
+                    </article>
+                </div>
+                <div class="col-md-6">
+                    <article class="crowdfunding">
+                        <img src="{% static 'img/crowfunding.jpg' %}" alt="">
+                        <h2>CROWDFUNDING</h2>
+                        <span class="bajada">FINANCIAMIENTO</span>
+                        <div class="divisor"></div>
+                        <p>Sigue nuestras redes sociales para informarte acerca de las diversas campañas y
+                            actividades que realizamos para obtener financiamiento para seguir ayudando.
+                        </p>
+                        <button class="btn-outline-black">CAMPAÑAS</button>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- GALERIA -->
+    <div id="galeria" class="galeria">
+        <div class="main-container">
+            <h2 class="title-text">Galería</h2>
+            <p class="parr-text">Conóce a nuestras sobrevivientes</p>
+            <div class="row">
+                {% for mascota in mascotas %}
+                    <div class="col-4 box hvr-fade hvr-underline-from-center" data-aos="zoom-out-down">
+                        <img src="{{ mascota.imagen.url }}" class="img-fluid" alt="Responsive image">
+                        <div class="box-info">
+                            <h2>{{ mascota.nombre }}</h2>
+                            <p>{{ mascota.descripcion }}</p> 
+                            <div class="box-boton">
+                                <a href="#contacto" class="btn btn-outline-light">ADÓPTAME</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+            
+        <!-- FORMULARIO -->
+        <div id="contacto" class="contacto center" data-aos="fade-up">
+            <div class="main-container center">
+                <div class="card" style="width: 50%;">
+                    <img class="card-img-top" src="{% static 'img/adopcion.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">¿Quieres dar un animal en adopción?</h5>
+                        <p class="card-text">Somos una gran red de adopción, te ayudaremos a buscar el mejor hogar para cualquier ser vivo.</p>
+                        <a class="btn btn-primary"  role="button" href="nueva-mascota">Haz click aquí</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
